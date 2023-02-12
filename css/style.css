@@ -1,36 +1,69 @@
-/* Let's style our h1 & h2 headers
-Make the text centered
-Give it a margin of 10px
-Font size should be twice the normal size */
-/* h1, h2{
-	
-  
-  } */
+/* Let's style our h1 & h2 headers */
+h1, h2 {
+	/* Make the text centered */
+	text-align: center;
+	/* Give it a margin of 10px */
+	margin: 10px;
+	/* Font size should be twice the normal size  */
+	font-size: 200%;
+  }
 
-  /* style the grid container
-  Dislay should be grid
-  Give it 3 columns of equal size
-  Grid gap of 10px
-   */
+  /* style the grid container */
 .grid {
-		display: grid;
-/* add a background-color:  of #2196f3
-Add  a background image that links to the image in your folder */
-			padding: 10px;
-			width: 620px;
-/* Add a solid black 3px border and round the corners */
-			text-align: center;
-			font-size: 30px;
-		  }
+	/* Dislay should be grid */
+	display: grid;
+	/* Give it 3 columns of equal size */
+	grid-template-columns: 1fr 1fr 1fr;
+	/* Grid gap of 10px */
+	grid-gap: 10px;
+	/* Add a background image that links to the image in your folder */
+	background-image: url('../images/background.jpg');
+	/* add a background-color:  of #2196f3 */
+	background-color: #2196f3;
+	/* Add a solid black 3px border */
+	border: 3px solid black;
+	/* Add round 3the corners */
+	border-radius: 25px;
+	padding: 10px;
+	width: 620px;
+	text-align: center;
+	font-size: 30px;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 auto; /*when I added this, this was what centered the two boxes*/
+	}
 
-/* Style the divs inside of the grid 
-Give them a background of #e5e5e5 
-Add 20px of padding & font-size of 30px  */
-
+/* Style the divs inside of the grid */
+.grid > div {
+	/* Give them a background of #e5e5e5  */
+	background-color: #e5e5e5;
+	text-align: center;
+	/* Add 20px of padding & font-size of 30px */
+		padding: 20px;
+		font-size: 30px; 
+}
 
 
 /* Now try and style the individual boxes using grid-column */
+.item2, .item_b {
+	grid-column: 3/4;
+}
+.item3 {
+	grid-column: 2/span 1;
+}
 
+.item4 {
+	grid-column: 1/span 1;
+}
+
+.item5 {
+	grid-column: 3/span 1;
+}
+
+.item_a {
+	grid-row: 3/3;
+	grid-column: 3/span 1;
+}
 
 	/* Play with: */
 	/* justify-content:; */
